@@ -84,13 +84,20 @@ cat <<- _EOF_
       <h1>$TITLE</h1>
       <p>$TIME_STAMP</p>
       $(check_root)
-      $(get_linux_kernal_info)
-      $(get_physical_swap_memory)
-      $(get_disk_space)
-      $(get_loggedin_users)
-      $(get_ip_address)
-      $(get_system_uptime)
-      $(get_system_info)
+      <h3>Basic Info</h3>
+      <pre>$(get_linux_kernal_info)</pre>
+      <h3>Free Memory</h3>
+      <pre>$(get_physical_swap_memory)</pre>
+      <h3>Disk Info</h3>
+      <pre>$(get_disk_space)</pre>
+      <h3>Shell Users</h3>
+      <pre>$(get_loggedin_users)</pre>
+      <h3>Network Info</h3>
+      <pre>$(get_ip_address)</pre>
+      <h3>System Uptime</h3>
+     <pre> $(get_system_uptime)</pre>
+      <h1>Lots of Info</h1>
+     <pre>$(get_system_info)</pre>
   </body>
   </html>
 _EOF_
