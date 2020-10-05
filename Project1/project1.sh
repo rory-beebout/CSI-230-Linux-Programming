@@ -16,15 +16,6 @@ TIME_STAMP="Updated on $RIGHT_NOW by $USER"
 
 ##### Functions
 
-# brief Exits if the user running is not the root user.
-check_root()
-{
-  if [[ $EUID -ne 0 ]]; then
-    echo "Must Run as Root" >&2
-    exit 1
-  fi
-}
-
 # brief Return basic distribution info
 get_linux_kernal_info()
 {
@@ -75,6 +66,10 @@ get_system_info()
 }
 
 ##### Main - Compiles all systems info into an html format
+if [[ $EUID -ne 0 ]]; then
+  echo "Must Run as Root" >&2
+  exit 1
+fi
 
 cat <<- _EOF_
   <html>
@@ -85,7 +80,6 @@ cat <<- _EOF_
   <body>
       <h1>$TITLE</h1>
       <p>$TIME_STAMP</p>
-      $(check_root)
       <h3>Basic Info</h3>
       <pre>$(get_linux_kernal_info)</pre>
       <h3>Free Memory</h3>
