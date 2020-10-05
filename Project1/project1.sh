@@ -21,4 +21,4 @@ cat <<- _EOF_
     <h1>HOSTNAME: $HOSTNAME</h1>
     </body>
     </html>
-_EOF_#!/bin/bash
+_EOF_
