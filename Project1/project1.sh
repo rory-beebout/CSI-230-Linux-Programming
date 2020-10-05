@@ -47,6 +47,8 @@ get_disk_space()
 # and use groups command for each one to get user and groups they belong to
 get_loggedin_users()
 {
+  #A very clever one-liner from Charles Duffy on stackoverflow at
+  #stackoverflow.com/questions/11426529/reading-output-of-a-command-into-an-array-in-bash
   IFS=$'\n' read -r -d '' -a users_array < <( who | cut -d: -f1 && printf '\0')
   for i in "${users_array[@]}"
   do
