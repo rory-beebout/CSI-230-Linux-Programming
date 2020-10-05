@@ -5,7 +5,9 @@
 # author rory.beebout
 # assignment Project - Scripting 1
 # date 10/5/2020
-# brief Writes Basic HTML for webpage, from linuxcommand.org "Writing Shell Scripts"
+# brief Writes Basic HTML for webpage, general format, constants,
+# and "Here" script from linuxcommand.org "Writing Shell Scripts"
+
 ##### Constants
 
 TITLE="System Information for $HOSTNAME"
@@ -22,24 +24,27 @@ check_root()
     exit 1
   fi
 }
+
+# brief Return basic distribution info
 get_linux_kernal_info()
 {
   uname -a
 }
 
-
+# brief Return free command output in human readable format
 get_physical_swap_memory()
 {
   free -h
 }
 
-
+# brief Return disk space command output in human readable format
 get_disk_space()
 {
   df -h
 }
 
-
+# brief Return users who have active shell prompts(logged-in)
+# and use groups command for each one to get user and groups they belong to
 get_loggedin_users()
 {
   IFS=$'\n' read -r -d '' -a users_array < <( who | cut -d: -f1 && printf '\0')
@@ -47,31 +52,27 @@ get_loggedin_users()
   do
     groups $i
   done
-#  while IFS=: read -r user pass desc home shell; do
-#    echo "$user is in '\n'"
-#    "groups $user"
-#  done < /etc/passwd
 }
 
-
-get_IP_address()
+# brief Return primary IP addr
+get_ip_address()
 {
   hostname -I
 }
 
-
+# brief Return time since last system start
 get_system_uptime()
 {
   uptime
 }
 
-
+# brief List tons and tons of system specs
 get_system_info()
 {
   lshw -html
 }
-##### Main - Compiles all systems info into an html format,
-# will need to direct into a file eventually.
+
+##### Main - Compiles all systems info into an html format
 
 cat <<- _EOF_
   <html>
@@ -83,14 +84,13 @@ cat <<- _EOF_
       <h1>$TITLE</h1>
       <p>$TIME_STAMP</p>
       $(check_root)
-      $(get_system_uptime)
-      $(get_IP_address)
-      $(get_loggedin_users)
-      $(get_disk_space)
-      $(get_physical_swap_memory)
       $(get_linux_kernal_info)
+      $(get_physical_swap_memory)
+      $(get_disk_space)
+      $(get_loggedin_users)
+      $(get_ip_address)
+      $(get_system_uptime)
       $(get_system_info)
   </body>
   </html>
 _EOF_
-
