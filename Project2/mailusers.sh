@@ -25,6 +25,7 @@ fi
 echo "Sign in to Email to send from - Must be Gmail"
 read -p 'Email Address: ' emailname
 read -sp 'Password: ' emailpasswd
+echo "\n"
 
 while [ "$1" != "" ];
 do
@@ -39,10 +40,10 @@ do
       pass=$(openssl rand -base64 32)
       #check if User exits/create user
       if id "${user}" &>/dev/null; then
-        echo 'user found'
+        echo 'user found...Overwriting Password'
         echo "$user:$pass" | chpasswd
       else
-        echo 'user not found'
+        echo 'user not found...Creating'
         useradd -m ${user}
         echo "$user:$pass" | chpasswd
       fi
