@@ -56,7 +56,7 @@ do
       --mail-from $emailname \
       --mail-rcpt $h \
       --user "$emailname:$emailpasswd" \
-      -T <(echo -e "From: $emailname\nTo: $h\nSubject: Project 2 Account Initialization\n\nHello\nYour account is made. \nUsername: ${user}\npassord: ${pass}")
+      -T <(echo -e "From: $emailname\nTo: $h\nSubject: Project 2 Account Initialization\n\nHello\nYour account is made. \nUsername: ${user}\npassword: ${pass}")
     done < $f
   else
     echo "${f} does not exist"
