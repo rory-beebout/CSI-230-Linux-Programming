@@ -29,4 +29,4 @@ curl --url 'smtp://smtp.gmail.com:587' --ssl \
       --mail-from $emailname \
       --mail-rcpt $rcpt \
       --user "$emailname:$emailpasswd" \
-      -T <(echo -e "From: $emailname\nTo: $h\nSubject: Pushweb Notification\n\nHelloo\nWe pushed web-content onto the apache server automatically")
+      -T <(echo -e "From: $emailname\nTo: $h\nSubject: Pushweb Notification\n\nHelloo\nweb content pushed to ${AWSHOST}")
