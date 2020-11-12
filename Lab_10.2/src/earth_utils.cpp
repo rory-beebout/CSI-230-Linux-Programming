@@ -46,6 +46,7 @@ int processCSV(std::ifstream& inFile, std::string kmlFileName)
         kmlFile << KMLFOOTER;
         kmlFile.close();
     }
+    return recordCount;
 }
 
 void WritePlacemark(std::ofstream& kmlfile, std::string name, std::string latitude, std::string longitude, std::string elevation)
