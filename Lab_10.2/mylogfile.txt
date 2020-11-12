@@ -1,0 +1,6 @@
+Thu Nov 12 10:53:31 2020 pop-os main[5955]: The kmlfile is: mykmlfile.csv and logfile is: mylogfile.txt
+Thu Nov 12 10:56:00 2020 pop-os main[6009]: The kmlfile is: mykmlfile.csv and logfile is: mylogfile.txt
+Thu Nov 12 11:15:58 2020 pop-os main[6489]: The kmlfile is: mykmlfile.csv and logfile is: mylogfile.txt
+Thu Nov 12 11:16:10 2020 pop-os main[6521]: The kmlfile is:mykmlfile.csv and logfile is:mylogfile.txt
+Thu Nov 12 11:48:18 2020 pop-os main[7255]: The kmlfile is:mykmlfile.csv and logfile is:mylogfile.txt
+Thu Nov 12 12:33:58 2020 pop-os main[8330]: The kmlfile is:mykmlfile.csv and logfile is:mylogfile.txt
