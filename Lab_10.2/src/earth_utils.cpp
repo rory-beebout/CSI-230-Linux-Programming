@@ -1,5 +1,5 @@
 /**
-* @file logger.cpp
+* @file earth_utils.cpp
 * @brief  Week 10, Google Earth Lab
 * Implements google earth file handling utilities
 * @author Rory Beebout
