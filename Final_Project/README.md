@@ -23,6 +23,7 @@ When the program is fully installed, it can be used within the terminal. After c
 ```sh
 final_driver a.png b.png c.png
 ```
+Note: Image files must be input as PNGs, and are looked for in the projects root directory(This one, with README.md in it). Output files are saved here as well.
 The program will then bring up a menu of the available options, and will wait for the user to choose an option by typing in the associated number. 
 
  File 1 of 3
