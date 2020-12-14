@@ -35,7 +35,8 @@ Enter number corresponding to desired action
 3. Horizontal Flip
 
 The program will loop through this screen as many times as the user likes. Once the user enters '0' (zero), the program will ask for the filename to save the modified image as, and will move on to the next file or complete.
-It will create a new file with the desired file name.
+It will create a new file with the desired file name.  
+  
 Note: The desired program appends '.png' to the filename automatically.
 
 
