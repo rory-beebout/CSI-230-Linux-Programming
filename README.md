@@ -1,3 +1,3 @@
-# CSI230-Demo
+# CSI230-Linux-Programming
 For CSI230 Linux/Unix Programming
-* I've gitted local and remote modifications, hmm hmm!?
+* All assignments in main branch per professor's request.
